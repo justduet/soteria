@@ -93,8 +93,8 @@ def lambda_handler(event, context):
                 update_home_query = "UPDATE wp_posts SET post_content=%s WHERE ID=%s"
                 cursor.execute(update_home_query, (new_home_post_content, magic_home_post_id))
             
-            # Commit the changes
-            connection.commit()
+                # Commit the changes
+                connection.commit()
 
             return new_key
 
